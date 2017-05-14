@@ -1,3 +1,4 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title.join().split(',').join('')}}</h1>
+<div class="" *ngFor="let l of title; let i = index">
+  <input (click)="clickHandler()" (input)="inputHandler($event)" type="text" name="{{i}}" value={{l}}/>
+</div>

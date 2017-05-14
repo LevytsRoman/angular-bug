@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = ['a', 'p', 'p', ' ', 'w', 'o', 'r', 'k', 's','!'];
+
+  clickHandler(){
+    console.log(this.title.join().split(',').join(''))
+  }
+
+  inputHandler(e){
+    var index = parseInt(e.target.getAttribute('name'));
+    // debugger
+    this.title[index] = e.target.value
+  }
 }
